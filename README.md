@@ -1,4 +1,4 @@
-<img src="index.png" alt="" style="width: 40px; height: 40px; padding-left: 20px">
+<a href="https://pritikabansal.github.io/syntific_calculator_me/welcome-page.html "><img src="index.png" alt="" style="width: 40px; height: 40px; padding-left: 20px">
 <h3>Welcome to Calculate Me!</h3> 
 
-<p> I made this Calculator, Here u can solve syntific calculations . <br> Basic problems can be solved easily. <br> Further it will update soon. </p>
+<p> I made this Calculator, Here u can solve syntific calculations . <br> Basic problems can be solved easily. <br> Further it will update soon. </p></a>
