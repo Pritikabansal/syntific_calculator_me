@@ -1,0 +1,255 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#prev-calculation-frame {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 20px;
+}
+#prev-calculation {
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 20px;
+    text-align: right;
+    margin-right: 20px;
+}
+.outter-b {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.inner-b1 {
+    background-color: #345e81;
+    height: 78px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    letter-spacing: 4px;
+    display: flex;
+    color: white;
+    font-size: 28px;
+}
+
+span {
+    color: #80d1df;
+}
+
+h1 img {
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+    padding-left: 20px;
+
+}
+
+.inner-b1 h2 {
+    font-size: 26px;
+    padding-right: 21px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+
+#top-box {
+    /* width: -moz-available; */
+    height: 160px;
+    font-size: 50px;
+    text-align: right;
+    border: 0;
+    padding: 22px 40px;
+    outline: none;
+    background-color: transparent;
+    letter-spacing: 3px;
+    font-family: courier;
+    color: white;
+    background-color: #66a0d0;
+    font-weight: 440;
+
+    width: 96%
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center */
+}
+
+#button-1{
+    background-color: black;
+    color: white;
+}
+
+#bb1 , #bb2{
+    background-color: #8ac48a;
+    color: white;
+}
+
+.aa {
+    background-color: rgb(239, 148, 21);
+    color: white;
+}
+
+.a1 {
+    background-color: #366185;
+    color: white;
+}
+
+button,
+.aa {
+  
+        height: 70px;
+        width: 70px;
+        margin-top: 15px;
+        margin-left: 18px;
+        font-size: 20px;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 3px 8px 8px rgb(133, 133, 133);
+        text-align: center;
+    
+}
+
+#bb{
+    color: #7897b1;
+}
+
+.b-equal:active,
+.aa:active,
+button:active {
+    transform: scale(0.88);
+}
+
+.bottom-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#prev-calculation {
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 20px;
+    position: absolute;
+    padding-top: 30px;
+    width: 97%;
+
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .b-box1,
+    .b-box2,
+    .b-box3,
+    .b-box4,
+    .b-box5,
+    .b-box6 {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button,
+    .aa {
+        height: 60px;
+        width: 60px;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    #top-box {
+        font-size: 37px;
+        padding: 18px 18px 18px 0px;
+    }
+    
+    
+}
+
+@media (max-width: 380px) {
+    .b-box1,
+    .b-box2,
+    .b-box3,
+    .b-box4,
+    .b-box5,
+    .b-box6 {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button,
+    .aa {
+        height: 50px;
+        width: 50px;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    #top-box {
+        font-size: 37px;
+        padding: 18px 18px 18px 0px;
+    }
+}
+
+@media (min-width: 1502px) {
+    .outter-b {
+        width: 25%;
+        margin-top: 10px;
+    }
+    body{
+        background-color: black;
+    }
+    .bottom-box {
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    #prev-calculation{
+        text-align: none;
+        margin-right: none;
+        padding-top: 18px;
+        width: 432px;
+    }
+    .b-box1,
+    .b-box2,
+    .b-box3,
+    .b-box4,
+    .b-box5,
+    .b-box6 {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button,
+    .aa {
+        height: 65px;
+        width: 65px;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    #top-box {
+        font-size: 37px;
+        padding: 18px 18px 18px 0px;
+    }
+}

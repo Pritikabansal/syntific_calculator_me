@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" type="x-icon" href="index.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body >
+    <div class="outter-b">
+        <!-- header - calculator -->
+        <div class="inner-b1">
+            <h1><img src="index.png" alt="">Calculate <span>Me!</span></h1>
+            <h2>&#9776;</h2>
+        </div>
+
+        <!-- main calculating box  -->
+        <div class="upperbox">
+            <div id="prev-calculation"></div>
+        <input id="top-box" type="text" placeholder="0"></input>
+        </div>
+        
+
+        <div class="bottom-box">
+
+            <div class="b-box1">
+                <button id="bb2" onclick="backspace()">CE</button>
+                <button class="a" id="bb">7</button>
+                <button class="a" id="bb">4</button>
+                <button class="a" id="bb">1</button>
+                <button class="a button-1" id="button-1" onclick="toggleButtons()">More</button>
+            </div>
+
+            <div class="b-box2">
+                <button id="bb1" onclick="topbox.value=''">AC</button>
+                <button class="a" id="bb">8</button>
+                <button class="a" id="bb">5</button>
+                <button class="a" id="bb">2</button>
+                <button class="a" id="bb">0</button>
+            </div>
+
+            <div class="b-box3">
+                <button class="a" id="bb">%</button>
+                <button class="a" id="bb">9</button>
+                <button class="a" id="bb">6</button>
+                <button class="a" id="bb">3</button>
+                <button class="a" id="bb">.</button>
+            </div>
+
+            <div class="b-box4">
+                <button class="a a1">/</button>
+                <button class="a a1">*</button>
+                <button class="a a1">-</button>
+                <button class="a a1">+</button>
+                <button class="aa" onclick="calculate()">=</button>
+            </div>
+
+            <div class="b-box5 hidden">
+                <button id="bb" onclick="sin()">sin</button>
+                <button id="bb" onclick="cos()">cos</button>
+                <button id="bb" onclick="tan()">tan</button>
+                <button id="bb" onclick="log()">log</button>
+                <button id="bb" onclick="e()">e</button>
+            </div>
+
+            <div class="b-box6 hidden">
+                <button id="bb" onclick="pow()">x^y</button>
+                <button id="bb" onclick="sqrt()">√</button>
+                <button id="bb" onclick="fact()">x!</button>
+                <button class="a" id="bb">(</button>
+                <button class="a" id="bb">)</button>
+            </div>
+
+            <div class="b-box7 hidden">
+                <button id="bb" onclick="pi()">pi(π)</button>
+                <button id="bb" onclick="exp()">exp</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    
+    var topbox = document.querySelector('#top-box');
+    var btn = document.querySelectorAll('.a');
+
+
+    for (item of btn) {
+        item.addEventListener('click', (e) => {
+            const btnText = e.target.innerText;
+            if (btnText !== 'More') {
+                topbox.value += btnText;
+            }
+        });
+    }
+
+    function sin() {
+        topbox.value = Math.sin(topbox.value);
+    }
+
+    function cos() {
+        topbox.value = Math.cos(topbox.value);
+    }
+
+    function tan() {
+        topbox.value = Math.tan(topbox.value);
+    }
+
+    function log() {
+        topbox.value = Math.log(topbox.value);
+    }
+
+    function exp() {
+        topbox.value = Math.exp(topbox.value);
+    }
+
+    function e() {
+        topbox.value = 2.71828182146;
+    }
+
+    function pi() {
+        topbox.value = 3.14159265359;
+    }
+
+    function pow() {
+        topbox.value = Math.pow(topbox.value, 2);
+    }
+
+    function sqrt() {
+        topbox.value = Math.sqrt(topbox.value, 2);
+    }
+
+    function fact() {
+        var i, num, f;
+        f = 1;
+        num = topbox.value;
+        for (i = 1; i <= num; i++) {
+            f = f * i;
+        }
+        i = i - 1;
+        topbox.value = f;
+    }
+
+
+    function backspace() {
+        topbox.value = topbox.value.substr(0, topbox.value.length - 1);
+    }
+
+    function calculate() {
+        var prevCalculation = topbox.value + " = " + eval(topbox.value);
+        document.getElementById("prev-calculation").innerText = prevCalculation;
+        topbox.value = eval(topbox.value);
+    }
+
+    const buttons = document.querySelector('.b-box5');
+    const buttons1 = document.querySelector('.b-box6');
+    const buttons2 = document.querySelector('.b-box7');
+
+    function toggleButtons() {
+        buttons.classList.toggle('hidden');
+        buttons1.classList.toggle('hidden');
+        buttons2.classList.toggle('hidden');
+    }
+</script>
+
+</html>
